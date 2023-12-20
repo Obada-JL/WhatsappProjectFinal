@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orjinal Whatsapp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftSide">
+        <!-- Header -->
+        <div class="mainNader">
+          <div class="userimg">
+            <img src="images/user.jpg" alt="" class="cover" />
+          </div>
+          <ul class="nav_icons">
+            <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+            <li><ion-icon name="chatbox"></ion-icon></li>
+            <li>
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+              <div class="options">
+                <ul class="optionsList" id="optionsList" style="display: none">
+                  <li class="optionsListItem">New group</li>
+                  <li class="optionsListItem">New community</li>
+                  <li class="optionsListItem">Starred messages</li>
+                  <li class="optionsListItem">Select Chats</li>
+                  <li class="optionsListItem">Settings</li>
+                  <li class="optionsListItem">Log out</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Chat -->
+        <div class="search_chat">
+          <div>
+            <input
+              id="searchBar"
+              type="text"
+              placeholder="Search or start new chat"
+            />
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </div>
+        <!-- CHAT LIST -->
+        <div class="chatlist">
+          <div class="block" onclick="chatClicks(0)">
+            <div class="imgBox">
+              <img src="images/profile pic.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Obada Jlelati</h4>
+                <p class="time">10:56</p>
+              </div>
+              <div class="message_p">
+                <p>🤣🤣🤣🤣</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="block unread" onclick="chatClicks(1)">
+            <div class="imgBox">
+              <img src="images/img2.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">البرمجة #C</h4>
+                <p class="time">12:34</p>
+              </div>
+              <div class="message_p">
+                <p>⭕️ رابط الدخول لجلسة Google Meet 🎦 :</p>
+                <b class="unreadNumber">1</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="block unread" onclick="chatClicks(2)">
+            <div class="imgBox">
+              <img src="images/img3.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">USOS Group</h4>
+                <p class="time">Yesterday</p>
+              </div>
+              <div class="message_p">
+                <p>يعني على لاحة الjettbox بكوتلين؟</p>
+                <b class="unreadNumber">2</b>
+              </div>
+            </div>
+          </div>
+          <div class="block" onclick="chatClicks(3)">
+            <div class="imgBox">
+              <img src="images/img4.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">مجتمع | CodeQ</h4>
+                <p class="time">Yesterday</p>
+              </div>
+              <div class="message_p">
+                <p>ما تنسوا تجاوبو مشان نحدد وقت الجلسة ب اسرع وقت</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img5.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">برمجة</h4>
+                <p class="time">15/11/2023</p>
+              </div>
+              <div class="message_p">
+                <p>سأطلبه من الاستاذ وأزودكم به</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img9.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Back End Developer</h4>
+                <p class="time">15/01/2023</p>
+              </div>
+              <div class="message_p">
+                <p>أه بس دي مركزة علي flutter مش فيها كل الDart</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img5.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Sam</h4>
+                <p class="time">Yesterday</p>
+              </div>
+              <div class="message_p">
+                <p>Did you finish the project?</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img6.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Junior</h4>
+                <p class="time">18/01/2022</p>
+              </div>
+              <div class="message_p">
+                <p>Nice course</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img7.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Zoey</h4>
+                <p class="time">18/01/2022</p>
+              </div>
+              <div class="message_p">
+                <p>I'll get back to you</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img8.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Josh</h4>
+                <p class="time">17/01/2022</p>
+              </div>
+              <div class="message_p">
+                <p>Congratulations</p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="imgBox">
+              <img src="images/img9.jpg" class="cover" alt="" />
+            </div>
+            <div class="details">
+              <div class="listHead">
+                <h4 class="chatName">Dian</h4>
+                <p class="time">15/01/2022</p>
+              </div>
+              <div class="message_p">
+                <p>Thanks alot</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightSide">
+        <div class="nader" style="display: none">
+          <div class="imgText">
+            <div class="userimg">
+              <img src="images/profile pic.jpg" alt="" class="cover" />
+            </div>
+            <h4>Obada Jlelati <br /><span>online</span></h4>
+          </div>
+          <ul class="nav_icons">
+            <li><ion-icon name="search-outline"></ion-icon></li>
+            <li>
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+            </li>
+          </ul>
+        </div>
+        <div class="nader" style="display: none" onclick="chatClicks(0)">
+          <div class="imgText">
+            <div class="userimg">
+              <img src="images/img2.jpg" alt="" class="cover" />
+            </div>
+            <h4>البرمجة #C<br /></h4>
+          </div>
+          <ul class="nav_icons">
+            <li><ion-icon name="search-outline"></ion-icon></li>
+            <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+          </ul>
+        </div>
+        <div class="nader" style="display: none" onclick="chatClicks(1)">
+          <div class="imgText">
+            <div class="userimg">
+              <img src="images/img3.jpg" alt="" class="cover" />
+            </div>
+            <h4>USOS Group <br /></h4>
+          </div>
+          <ul class="nav_icons">
+            <li><ion-icon name="search-outline"></ion-icon></li>
+            <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+          </ul>
+        </div>
+        <div class="nader" style="display: none" onclick="chatClicks(2)">
+          <div class="imgText">
+            <div class="userimg">
+              <img src="images/img4.jpg" alt="" class="cover" />
+            </div>
+            <h4>مجتمع|CodeQ <br /></h4>
+          </div>
+          <ul class="nav_icons">
+            <li><ion-icon name="search-outline"></ion-icon></li>
+            <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+          </ul>
+        </div>
+
+        <!-- CHAT-BOX -->
+        <div class="chatbox" id="unread" style="display: none">
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>السلام عليكم<br /><span>12:18</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>و عليكم السلام <br /><span>12:18</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>شلونك ؟ <br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>الحمد لله <br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              كان عندي مشكله بسيطه بس رح شوف يمكن اتحلت<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>خير خير<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              المشروع ما عم يزبط عم يعطيني خطأ بالصفحة الرئيسية<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>شو نوع الخطأ ؟<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>Runtime error<br /><span>12:15</span></p>
+          </div>
+
+          <div class="message friend_msg">
+            <p>معناها زبطها لحالك<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>ما عندك اي فكرة؟<br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>لا ابدا<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>شو اعمل يعني؟<br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>دور عالنت<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>😒😒<br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>🤣🤣🤣🤣<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+        </div>
+        <div class="chat_input" style="display: none">
+          <ion-icon name="happy-outline"></ion-icon>
+          <!-- <ion-icon name="happy-outline"></ion-icon> -->
+          <input type="text" placeholder="Type a message" i />
+
+          <i
+            class="fa-regular fa-paper-plane fa-xl"
+            onclick="sendMessage(0)"
+            style="color: #51585c"
+            class="sendMessage"
+          ></i>
+        </div>
+        <div class="chatbox" style="display: none">
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>السلام عليكم شباب<br /><span>12:18</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>عليكم السلام <br /><span>12:18</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>الحمد لله والله في نعمة <br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>الحمد لله <br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              كان عندي مشكله بسيطه بس رح شوف يمكن اتحلت<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>خير خير<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              هلا المشكلة يا صديقي عندي اسم unique ما بدي يتكرر و عطيته الخاصية
+              unique<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>i cant solve it.<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              ⭕️ رابط الدخول لجلسة Google Meet 🎦 :<br /><span>12:15</span>
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+        </div>
+        <div class="chat_input" style="display: none">
+          <ion-icon name="happy-outline"></ion-icon>
+          <!-- <ion-icon name="happy-outline"></ion-icon> -->
+          <input type="text" placeholder="Type a message" />
+          <i
+            class="fa-regular fa-paper-plane fa-xl sendMessage"
+            onclick="sendMessage(1)"
+            style="color: #51585c"
+          ></i>
+        </div>
+        <div class="chatbox" style="display: none">
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>السلام عليكم شباب<br /><span>12:18</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>عليكم السلام <br /><span>12:18</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>الحمد لله والله في نعمة <br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>الحمد لله <br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              كان عندي مشكله بسيطه بس رح شوف يمكن اتحلت<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>خير خير<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              هلا المشكلة يا صديقي عندي اسم unique ما بدي يتكرر و عطيته الخاصية
+              unique<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>......<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>يعني على لاحة الjettbox بكوتلين؟<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+        </div>
+        <div class="chat_input" style="display: none">
+          <ion-icon name="happy-outline"></ion-icon>
+          <!-- <ion-icon name="happy-outline"></ion-icon> -->
+          <input type="text" placeholder="Type a message" />
+          <i
+            class="fa-regular fa-paper-plane fa-xl sendMessage"
+            onclick="sendMessage(2)"
+            style="color: #51585c"
+          ></i>
+        </div>
+        <div class="chatbox" style="display: none">
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>السلام عليكم شباب<br /><span>12:18</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>عليكم السلام <br /><span>12:18</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>الحمد لله والله في نعمة <br /><span>12:15</span></p>
+          </div>
+          <div class="message friend_msg">
+            <p>الحمد لله <br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              كان عندي مشكله بسيطه بس رح شوف يمكن اتحلت<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>خير خير<br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              هلا المشكلة يا صديقي عندي اسم unique ما بدي يتكرر و عطيته الخاصية
+              unique<br /><span>12:15</span>
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>المبرمج الشهير ابوالنور مر من هنا <br /><span>12:15</span></p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+          <div class="message my_msg">
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><span
+                >12:15</span
+              >
+            </p>
+          </div>
+          <div class="message friend_msg">
+            <p>
+              ما تنسوا تجاوبو مشان نحدد وقت الجلسة ب اسرع وقت<br /><span
+                >12:15</span
+              >
+            </p>
+            <div class="trashBox" style="display: none">
+              <i class="fa-solid fa-trash-can" style="color: #ffffff"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHAT INPUT -->
+        <div class="chat_input" style="display: none">
+          <ion-icon name="happy-outline"></ion-icon>
+          <!-- <ion-icon name="happy-outline"></ion-icon> -->
+          <input type="text" placeholder="Type a message" />
+          <i
+            class="fa-regular fa-paper-plane fa-xl sendMessage"
+            onclick="sendMessage(3)"
+            style="color: #51585c"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/37e3436c85.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
